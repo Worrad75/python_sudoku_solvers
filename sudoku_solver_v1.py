@@ -1,35 +1,42 @@
 import math
 
-# board = [
-#     [7,8,0,4,0,0,1,2,0],
-#     [6,0,0,0,7,5,0,0,9],
-#     [0,0,0,6,0,1,0,7,8],
-#     [0,0,7,0,4,0,2,6,0],
-#     [0,0,1,0,5,0,9,3,0],
-#     [9,0,4,0,6,0,0,0,5],
-#     [0,7,0,3,0,0,0,1,2],
-#     [1,2,0,0,0,7,4,0,0],
-#     [0,4,9,2,0,6,0,0,7]
-# ]
-
 board = [
-    [],
-    [],
-    []
+    [7,8,0,4,0,0,1,2,0],
+    [6,0,0,0,7,5,0,0,9],
+    [0,0,0,6,0,1,0,7,8],
+    [0,0,7,0,4,0,2,6,0],
+    [0,0,1,0,5,0,9,3,0],
+    [9,0,4,0,6,0,0,0,5],
+    [0,7,0,3,0,0,0,1,2],
+    [1,2,0,0,0,7,4,0,0],
+    [0,4,9,2,0,6,0,0,7]
 ]
 
+# board = [
+#     [1,0,0,2,0,0],
+#     [0,0,0,1,6,3],
+#     [6,0,0,0,0,0],
+#     [5,0,0,0,3,0],
+#     [0,1,0,0,0,4],
+#     [0,0,2,3,0,0]
+# ]
+
+# 3, 3, 8 for original
+box_height = 3
+box_width = 3
+total_width = 8
 
 def print_board(board):                           # takes in a board
     for i in range(len(board)):                     # len(board) reflects the height of the board
-        if i % 3 == 0 and i != 0:                   # prints a break line after every 3 rows
-            print("- - - - - - - - - - - - - ")
+        if i % box_height == 0 and i != 0:                   # prints a break line after every 3 rows
+            print("\n- - - - - - - - - - - - - ")
 
         for j in range(len(board[0])):              # len(board[0]) reflects the width of the board
-            if j % 3 == 0 and j != 0:               # prints a break line after every 3 columns
+            if j % box_width == 0 and j != 0:               # prints a break line after every 3 columns
                 print(" | ", end="")
             
             digitToPrint = board[i][j] if board[i][j] != 0 else " "   # we will print 0's as spaces
-            if j == 8:
+            if j == total_width:
                 print(digitToPrint)                  # if its the last num in the row, print (with a "\n")
             else:
                 print(str(digitToPrint) + " ", end="")   # otherwise, print without a new line
