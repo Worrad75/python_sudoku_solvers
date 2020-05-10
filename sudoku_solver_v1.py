@@ -88,10 +88,10 @@ def solve(board):
     return False
 
 # print(find_empty(board))
-print("\n\n")
-print_board(board)
-print("\n\n")
+# print("\n\n")
+# print_board(board)
+# print("\n\n")
 # pos = (5,4)
 # print(valid(board, 3, pos))
-solve(board)
-print_board(board)
+# solve(board)
+# print_board(board)
