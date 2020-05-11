@@ -1,3 +1,6 @@
+# all code credit goes to TechWithTim
+# https://techwithtim.net/tutorials/python-programming/sudoku-solver-backtracking/
+
 class Grid:
     board = [
         [7, 8, 0, 4, 0, 0, 1, 2, 0],

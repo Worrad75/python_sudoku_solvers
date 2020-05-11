@@ -1,3 +1,6 @@
+# all code credit goes to TechWithTim
+# https://techwithtim.net/tutorials/python-programming/sudoku-solver-backtracking/
+
 import pygame
 
 class Cube:
